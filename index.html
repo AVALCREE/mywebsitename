@@ -13,7 +13,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       padding: 40px;
+      text-align: center;
     }
     .logo {
       width: 180px;
@@ -23,12 +25,10 @@
     h1 {
       font-size: 2.5em;
       margin-bottom: 10px;
-      text-align: center;
     }
     p {
       font-size: 1.2em;
       max-width: 600px;
-      text-align: center;
       margin-bottom: 40px;
     }
     .browser-mockup {
@@ -43,8 +43,12 @@
     .browser-header {
       display: flex;
       align-items: center;
-      gap: 8px;
+      justify-content: space-between;
       margin-bottom: 10px;
+    }
+    .window-controls {
+      display: flex;
+      gap: 8px;
     }
     .circle {
       width: 12px;
@@ -54,13 +58,30 @@
     }
     .circle.yellow { background-color: #ffbd2e; }
     .circle.green { background-color: #27c93f; }
+    .nav-buttons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .nav-buttons button {
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .nav-buttons button:hover {
+      background: #444;
+    }
     .browser-bar {
       background: #333;
       padding: 10px;
       border-radius: 6px;
       color: #aaa;
       font-size: 0.9em;
-      margin-bottom: 20px;
+      margin: 10px 0;
+      text-align: center;
     }
     .content-area {
       padding: 20px;
@@ -105,6 +126,7 @@
       margin-top: 60px;
       font-size: 0.9em;
       opacity: 0.6;
+      text-align: center;
     }
   </style>
 </head>
@@ -115,11 +137,19 @@
 
   <div class="browser-mockup">
     <div class="browser-header">
-      <div class="circle"></div>
-      <div class="circle yellow"></div>
-      <div class="circle green"></div>
+      <div class="window-controls">
+        <div class="circle"></div>
+        <div class="circle yellow"></div>
+        <div class="circle green"></div>
+      </div>
+      <div class="nav-buttons">
+        <button title="Back">←</button>
+        <button title="Forward">→</button>
+        <button title="Downloads">⬇️</button>
+        <button title="Settings">⚙️</button>
+      </div>
     </div>
-    <div class="browser-bar">https://lumexplore.app/home</div>
+    <div class="browser-bar">https://mywebsitename-seven.vercel.app/</div>
     <div class="content-area">
       <h2>Fast. Private. Elegant.</h2>
       <p>Experience a futuristic interface and seamless performance across the web.</p>
